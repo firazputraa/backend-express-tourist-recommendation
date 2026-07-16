@@ -2,7 +2,7 @@ import prisma from "../../utils/prisma.js";
 import axios from "axios";
 import ApiError from "../../errors/api-error.js";
 
-const FLASK_API_URL = process.env.FLASK_API_URL || "http://localhost:5002";
+const FLASK_API_URL = process.env.FLASK_API_URL;
 
 export const searchPlaces = async (kataKunci) => {
   if (!kataKunci) {

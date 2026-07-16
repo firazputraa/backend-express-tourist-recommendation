@@ -7,7 +7,9 @@ import placeRouter from "./apps/place/place-router.js"
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:5000"]
+}));
 app.use(express.json());
 
 app.use("/users", userRouter);
