@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:5000"] || ["https://kujangtrip.netlify.app"],
+    origin: ["http://localhost:5000", "https://kujangtrip.netlify.app"],
     credentials: true,
   }),
 );
