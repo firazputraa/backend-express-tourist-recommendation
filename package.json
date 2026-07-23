@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js",
-    "build": "npm install && npx prisma generate"
+    "build": "npm install && npx prisma generate && npx prisma db push && npm run seed"
   },
   "devDependencies": {
     "@prisma/client": "^6.12.0",

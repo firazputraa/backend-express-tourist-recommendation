@@ -7,9 +7,12 @@ import placeRouter from "./apps/place/place-router.js"
 dotenv.config();
 const app = express();
 
-app.use(cors({
-  origin: ["http://localhost:5000"]
-}));
+app.use(
+  cors({
+    origin: ["http://localhost:5000"] || ["https://kujangtrip.netlify.app"],
+    credentials: true,
+  }),
+);
 app.use(express.json());
 
 app.use("/users", userRouter);
